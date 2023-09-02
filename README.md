@@ -7,7 +7,7 @@ This a To-Do list application in Python that helps you manage your task and set 
 - [Azeez Tiamiyu](https://github.com/hertheyhermee)
 - [Aisha Adewoyin](https://github.com/Aishat452)
 
-# Becoming a Contributor
+# Becoming a Collaborator.
 1. Fork the repository.
 2. Create a branch named 'fix' to make adjustment or 'Features' to add a new feature.
 3. Push the branch to your forked repository.
