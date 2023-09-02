@@ -1,5 +1,0 @@
-Task details!! 
-Task: Testing 
-Description: We would be good Software Engineers
-Time logged: 2023-09-02 14:18:45.864303 
-Task to complete at: 12:30:15 

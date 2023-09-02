@@ -55,6 +55,13 @@ Functions/modules.
 - input/edit description
 - Record/input time.
 
+### show() function
+- loop throught the task in that directory.
+
+### select()
+- select a task based on index
+
+
 ### Reminder Functions
 - def remind_me()
 - Prompt (name of task + description of task + Time)

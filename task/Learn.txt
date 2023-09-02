@@ -1,0 +1,5 @@
+Task details!! 
+Task: Learn 
+Description: study new codes in python
+Time logged: 2023-09-02 17:15:06.776951 
+Task to complete at: 10:00 pm 

@@ -10,7 +10,7 @@ def add_task():
     task_name = input("Enter Task name: ")
     task_desc = input("Enter task Description: ")
     task_created_at = datetime.datetime.now()
-    remind_at = input (" Please enter a time in HH:MM:SS format:")
+    remind_at = input ("Please enter a time in HH:MM (am/pm)format: ")
     # file handling section
     directory_path = './task'
     file_name = "{}.txt".format(task_name)
@@ -27,9 +27,10 @@ def add_task():
             file.write(f'Description: {task_desc}\n')
             file.write(f'Time logged: {task_created_at} \n')
             file.write(f'Task to complete at: {remind_at} \n')
+            print("Task successfully added!!!")
 
     except Exception as e:
        print(f"You don't have permission to create a file in {e}.")
 
 
-add_task()
+# add_task()
