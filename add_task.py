@@ -13,7 +13,7 @@ def add_task():
     remind_at = input ("Please enter a time in HH:MM (am/pm)format: ")
     # file handling section
     directory_path = './task'
-    file_name = "{}.txt".format(task_name)
+    file_name = "{}".format(task_name)
     file_path = os.path.join(directory_path, file_name)
 
     # to create directory if it doesn't exist
