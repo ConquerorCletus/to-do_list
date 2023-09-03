@@ -33,4 +33,4 @@ def add_task():
        print(f"You don't have permission to create a file in {e}.")
 
 
-# add_task()
+add_task()

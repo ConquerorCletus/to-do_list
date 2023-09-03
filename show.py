@@ -28,14 +28,21 @@ def show():
 def select():
     """This function selects a task"""
     tasks = check_task()
-    for task_num in enumerate(tasks):
-        task_num = int(input("Select the task number: ")) - 1
-
-        if 0 <= task_num < len(tasks) :
-            selected_task = tasks[task_num]
-            return (selected_task)
-        else:
-            print("Invalid task number !!!")
-            return None
+    try:
+        for task_num in enumerate(tasks):
+            task_num = int(input("Select the task number: ")) - 1
+            if task_num <= len(tasks) :
+                selected_task_name = tasks[task_num]
+                selected_task = os.path.join('./task', selected_task_name)
+                return (selected_task)
+            else:
+                print("Invalid task number !!!")
+                return None
+    except FileNotFoundError:
+        print("The task not found!!! ")
+    except ValueError:
+        print("Invalid task number chosen !!")
+    except Exception as e:
+        print(f"An error Occured :{e}")
 
 # show()
