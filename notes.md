@@ -12,7 +12,7 @@ main program
 2.Loop until exit is called.
 
 Functions/modules.
-1.add task function
+1.add task function: **progress = 100%** 
 - name of task
 - Time and date to carryout task
 - store in a file
@@ -26,7 +26,7 @@ Functions/modules.
 4.Reminder function
 - Reminder when it is time for the task.
 
-5. list/show task
+5. list/show task **progress = 100%**
 - show the task through reading from the file.
 
 ## Pseudocode 
@@ -51,7 +51,7 @@ Functions/modules.
 - import OS
 - import datetime
 - def edit_task()
-- Open file in append mode
+- Open file in read (r+) mode
 - input/edit description
 - Record/input time.
 

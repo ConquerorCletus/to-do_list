@@ -22,7 +22,6 @@ def add_task():
 
     try:
         with open(file_path, 'w') as file:
-            file.write("Task details!! \n")
             file.write(f'Task: {task_name} \n')
             file.write(f'Description: {task_desc}\n')
             file.write(f'Time logged: {task_created_at} \n')
