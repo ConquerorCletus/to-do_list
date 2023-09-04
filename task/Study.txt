@@ -1,5 +1,0 @@
-Task details!! 
-Task: Study 
-Description: I need to study for exam
-Time logged: 2023-09-02 17:06:37.453730 
-Task to complete at: 12:30 
