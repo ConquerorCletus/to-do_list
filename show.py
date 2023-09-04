@@ -5,13 +5,24 @@ This module displays the tasks
 import os
 
 def check_task():
-    """Check for tasks in tasks directory"""
+    """returns list of tasks in tasks directory"""
     directory_path = './task'
 
     # To check if the task exists
     if os.path.exists(directory_path) and os.path.isdir(directory_path):
         tasks = os.listdir(directory_path)
         return (tasks)
+
+
+def to_task(task_name):
+    """This function returns the task path
+
+    args:
+        task_name: The name of the task.
+    """
+    directory_path = './task'
+    task_path = os.path.join(directory_path, task_name)
+    return (task_path)
 
 def show():
     """This Function shows the saved task."""
@@ -33,7 +44,7 @@ def select():
             task_num = int(input("Select the task number: ")) - 1
             if task_num <= len(tasks) :
                 selected_task_name = tasks[task_num]
-                selected_task = os.path.join('./task', selected_task_name)
+                selected_task = to_task(selected_task_name) 
                 return (selected_task)
             else:
                 print("Invalid task number !!!")
