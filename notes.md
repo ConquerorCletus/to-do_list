@@ -20,7 +20,7 @@ Functions/modules.
 2.delete task function
 - delete task
 
-3.edit task function
+3.edit task function **progress = 100%**
 - Enable to edit task through the add task function
 
 4.Reminder function
