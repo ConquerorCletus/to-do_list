@@ -15,12 +15,10 @@ def collect_data():
 
     # To Ensure user entered the right time format
     try:
-        remind_at = input ("Please enter a time to perform task in HH:MM (am/pm)format: ")
+        remind_at = input ("Please enter a time to perform task in HH:MM format: ")
         # to extract the time component only
-        get_time = '2023-09-05' + remind_at
-        remind = datetime.datetime.strptime(get_time, '%Y-%m-%d %H:%M')
+        time_to_be_reminded = datetime.datetime.strptime(remind_at,'%H:%M')
         # retrieving time only from parsed string
-        time_to_be_reminded = remind.time()
     except ValueError:
         print("Invalid date/time format, use the format HH:MM")
 
@@ -28,8 +26,8 @@ def collect_data():
     return {
             'task title:': task_name,
             'task Description:': task_desc,
-            'Time logged:': task_created_at,
-            'Deadline:': time_to_be_reminded
+            'Time logged:': task_created_at.isoformat(),
+            'Deadline:': time_to_be_reminded.strftime('%H:%M')
             }
 
 def add_task():
@@ -47,10 +45,6 @@ def add_task():
     try:
         with open(file_path, 'w') as file:
             json.dump(tasks, file, indent=4)
-            # file.write(f'Task: {task_name} \n')
-            # file.write(f'Description: {task_desc}\n')
-            # file.write(f'Time logged: {task_created_at} \n')
-            # file.write(f'Task to complete at: {remind_at} \n')
             print("Task successfully added!!!")
 
     except Exception as e:
