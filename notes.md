@@ -17,7 +17,7 @@ Functions/modules.
 - Time and date to carryout task
 - store in a file
 
-2.delete task function
+2.delete task function **progress = 100%** 
 - delete task
 
 3.edit task function **progress = 100%**
@@ -30,7 +30,7 @@ Functions/modules.
 - show the task through reading from the file.
 
 ## Pseudocode 
-### add task function.
+### add task function.**progress = 100%** 
 - import datetime modules
 - def add_task()
 - input of task name
@@ -40,14 +40,14 @@ Functions/modules.
 - open a file in append mode
 - store file as format(task/task_name.txt)
 
-### delete task function
+### delete task function **progress = 100%** 
 - import OS
 - def delete_task()
 - prompt "are you sure you want to delete?"
 - collect input yes/no
 - delete file
 
-### Edit task function
+### Edit task function **progress = 100%** 
 - import OS
 - import datetime
 - def edit_task()
@@ -55,18 +55,18 @@ Functions/modules.
 - input/edit description
 - Record/input time.
 
-### show() function
+### show() function **progress = 100%** 
 - loop throught the task in that directory.
 
-### select()
+### select() **progress = 100%** 
 - select a task based on index
 
 
-### Reminder Functions
+### Reminder Functions **progress = 0%** 
 - def remind_me()
 - Prompt (name of task + description of task + Time)
 
-### show task function
+### show task function **progress = 100%** 
 - import OS
 - def show_task()
 - Read file (i.e task directory) 
