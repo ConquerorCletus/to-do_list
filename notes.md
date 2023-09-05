@@ -1,29 +1,29 @@
-To do list app
+# To-do list app Thought process and Pseudocode.
+The project is starting as a command line application that stores task at the task directory. It is going to perform the features listed below.
 
-
-
-Features of the To-do List app
+## Features of the To-do List app
 1. It manage task - deleting, adding and editing
 2. store time (date/day)
 3. Reminder.
 
-main program
-1.The option as a switch statement
-2.Loop until exit is called.
+#### main program
+1. The option as a switch statement
+2. Loop until exit is called.
 
-Functions/modules.
-1.add task function: **progress = 100%** 
+#### Functions/modules.
+1. add task function: **progress = 100%** 
 - name of task
 - Time and date to carryout task
 - store in a file
+'***I am Thinking of organizing input in dictionary for easier collection***'
 
-2.delete task function **progress = 100%** 
+2. delete task function **progress = 100%** 
 - delete task
 
-3.edit task function **progress = 100%**
+3. edit task function **progress = 100%**
 - Enable to edit task through the add task function
 
-4.Reminder function
+4. Reminder function
 - Reminder when it is time for the task.
 
 5. list/show task **progress = 100%**
@@ -64,9 +64,19 @@ Functions/modules.
 
 ### Reminder Functions **progress = 0%** 
 - def remind_me()
-- Prompt (name of task + description of task + Time)
+- - - 
+- def get_time(): This would get the time from the task directory.
 
 ### show task function **progress = 100%** 
 - import OS
 - def show_task()
-- Read file (i.e task directory) 
+- Read file (i.e task directory)
+
+
+
+in main program.
+option 1 - add task
+    add_task.collect_data()
+    add_task.save()
+option 2
+option 3
