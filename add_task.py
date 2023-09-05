@@ -7,30 +7,35 @@ import datetime
 import os
 import json
 
-def add_task():
-    """This functions add a task to the To-do List"""
-
+def collect_data():
     # collect input data to store in a dictionary called task
     task_name = input("Enter Task name: ")
     task_desc = input("Enter task Description: ")
     task_created_at = datetime.datetime.now()
-    remind_at = input ("Please enter a time to perform task in HH:MM (am/pm)format: ")
 
     # To Ensure user entered the right time format
     try:
-        remind_at = datetime.datetime.strptime(remind_at, '%HH:%MM')
+        remind_at = input ("Please enter a time to perform task in HH:MM (am/pm)format: ")
+        # to extract the time component only
+        get_time = '2023-09-05' + remind_at
+        remind = datetime.datetime.strptime(get_time, '%Y-%m-%d %H:%M')
+        # retrieving time only from parsed string
+        time_to_be_reminded = remind.time()
     except ValueError:
         print("Invalid date/time format, use the format HH:MM")
 
     # The dictionary created to store inputs
-    tasks = {
+    return {
             'task title:': task_name,
             'task Description:': task_desc,
             'Time logged:': task_created_at,
-            'Deadline:': remind_at
+            'Deadline:': time_to_be_reminded
             }
 
+def add_task():
+    """This functions add a task to the To-do List"""
     # file handling section
+    tasks = collect_data()
     directory_path = './task'
     file_name = "{}.json".format(tasks['task title:'])
     file_path = os.path.join(directory_path, file_name)
@@ -41,7 +46,7 @@ def add_task():
 
     try:
         with open(file_path, 'w') as file:
-            json.dumps(tasks, file, indent=4)
+            json.dump(tasks, file, indent=4)
             # file.write(f'Task: {task_name} \n')
             # file.write(f'Description: {task_desc}\n')
             # file.write(f'Time logged: {task_created_at} \n')
