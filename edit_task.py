@@ -9,8 +9,8 @@ import show
 import json
 
 def edit_task():
+    """This function edit the tasks"""
     show.show()
-    """This function edit the tsaks"""
     selected_task = show.select()
     time_updated = datetime.datetime.now()
     # to open the selected task for editting
@@ -49,8 +49,7 @@ def edit_task():
 
         details = input("Do you want to see new details of task? yes/no: ")
         if details == 'yes':
-            new_task = selected_task
-            show_details(new_task)
+            show_details(selected_task)
         elif details == 'no':
             print("Exiting program!!!")
               
