@@ -1,11 +1,12 @@
 """This module shows the task details"""
-import show
+# import show
 import json
+import os
 
 
-def show_details():
+def show_details(show_task):
     """This shows the details of the tasks"""
-    show_task = show.select()
+    # show_task = show.select()
     if show_task == None:
         print("No task available!!")
     else:
@@ -17,4 +18,4 @@ def show_details():
 
     
 
-show_details()
+# show_details()
