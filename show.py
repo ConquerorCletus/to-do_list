@@ -42,6 +42,9 @@ def select():
     try:
         for task_num in enumerate(tasks):
             task_num = int(input("Select the task number: ")) - 1
+            if len(tasks) == 0:
+                print("You have no task!!! ")
+                return None
             if task_num <= len(tasks) :
                 selected_task_name = tasks[task_num]
                 selected_task = to_task(selected_task_name) 

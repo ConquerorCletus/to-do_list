@@ -6,6 +6,7 @@ import os
 import datetime
 from details import show_details
 import show
+import json
 
 def edit_task():
     """This function edit the tasks"""
@@ -15,7 +16,8 @@ def edit_task():
    
    # to open the selected task for editting
     with open(selected_task, 'r+') as editted_task:
-        task_line = editted_task.readlines()
+        # task_line = editted_task.readlines()
+        tasks = json
       
       # show details of tasks with a specific line number
         for line, details in enumerate(task_line):

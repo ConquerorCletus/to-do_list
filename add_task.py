@@ -24,10 +24,10 @@ def collect_data():
 
     # The dictionary created to store inputs
     return {
-            'task title:': task_name,
-            'task Description:': task_desc,
-            'Time logged:': task_created_at.isoformat(),
-            'Deadline:': time_to_be_reminded.strftime('%H:%M')
+            'task title': task_name,
+            'task Description': task_desc,
+            'Time logged': task_created_at.isoformat(),
+            'Deadline': time_to_be_reminded.strftime('%H:%M')
             }
 
 def add_task():
@@ -35,7 +35,7 @@ def add_task():
     # file handling section
     tasks = collect_data()
     directory_path = './task'
-    file_name = "{}.json".format(tasks['task title:'])
+    file_name = "{}.json".format(tasks['task title'])
     file_path = os.path.join(directory_path, file_name)
 
     # to create directory if it doesn't exist
