@@ -44,11 +44,13 @@ def edit_task():
         else:
             print('Invalid option\n choose between option(1-4)')
 
+        editted_task.seek(0)
         json.dump(task_line, editted_task, indent=4)
 
         details = input("Do you want to see new details of task? yes/no: ")
         if details == 'yes':
-            show_details(selected_task)
+            new_task = selected_task
+            show_details(new_task)
         elif details == 'no':
             print("Exiting program!!!")
               
