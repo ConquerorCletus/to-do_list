@@ -1,6 +1,5 @@
 """This module shows the task details"""
 import show
-# import os
 import json
 
 
