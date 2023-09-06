@@ -24,5 +24,9 @@ def remind_me():
             schedule.run_pending()
             time.sleep(1)
 
+        reminder_thread = threading.Thread(target=remind_me)
+        reminder_thread.start()
+        print("Task scheduled!!")
+
 
 remind_me()
