@@ -28,9 +28,9 @@ def show():
     """This Function shows the saved task."""
     print("Your saved tasks are: ")
     tasks = check_task()
-    if tasks == check_task():
+    if tasks == tasks:
         for i, saved_task in enumerate(tasks):
-            print(f"{i + 1}.{saved_task}")
+            print(f"{i + 1}.{saved_task[:-5]}")
 
     else:
         print(" Task does not exist !!!")
