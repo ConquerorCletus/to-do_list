@@ -23,4 +23,4 @@ def delete_task():
         print("No task selected to delete")
 
 
-delete_task()
+# delete_task()
