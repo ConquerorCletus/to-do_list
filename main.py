@@ -45,7 +45,7 @@ def main():
             print("INVALID OPTION. ENTER BETWEEN OPTION (1-5)")
 
         choice = input("Do you want to continue? Yes/no : ")
-        if choice.lower != 'yes':
+        if choice.lower() != 'yes':
             print("GOODBYE !! EXITING PROGRAM !!")
             break
 
